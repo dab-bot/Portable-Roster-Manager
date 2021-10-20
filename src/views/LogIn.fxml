@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogController">
+   <left>
+      <AnchorPane prefHeight="600.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="800.0" fitWidth="1436.0" layoutX="-903.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LOGIN%20BG.jpg" />
+               </image></ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="791.0" prefWidth="649.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="7.0" layoutY="304.0" prefHeight="26.0" prefWidth="101.0" text="USERNAME">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="6.0" layoutY="324.0" prefHeight="31.0" prefWidth="527.0" promptText="Enter your username" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password" layoutX="7.0" layoutY="425.0" prefHeight="31.0" prefWidth="524.0" promptText="Enter your password" style="-fx-background-color: #ffffff;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="login" layoutX="204.0" layoutY="531.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: #0F60FF;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0042ffc4" height="19.52" offsetY="2.0" radius="8.8875" width="18.03" />
+               </effect></Button>
+            <Label fx:id="logInError" alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="460.0" prefHeight="17.0" prefWidth="330.0" textFill="RED" textOverrun="CLIP" />
+            <Text fill="#030000" layoutX="7.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in to Roster.">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Region layoutX="7.0" layoutY="357.0" prefHeight="2.0" prefWidth="525.0" style="-fx-background-color: #B2BAC9;" />
+            <Region layoutX="6.0" layoutY="458.0" prefHeight="2.0" prefWidth="525.0" style="-fx-background-color: #B2BAC9;" />
+            <Label layoutX="6.0" layoutY="405.0" prefHeight="26.0" prefWidth="101.0" text="PASSWORD">
+               <font>
+                  <Font name="Segoe UI Bold" size="11.0" />
+               </font>
+            </Label>
+            <Text fill="#030000" layoutX="7.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your details below">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

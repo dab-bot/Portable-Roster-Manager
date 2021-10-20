@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="639.0" style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditShiftController">
+   <center>
+      <AnchorPane prefHeight="434.0" prefWidth="643.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="25.0" layoutY="14.0" text="Employee:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="employeeSelect" focusColor="#0f60ff" layoutX="140.0" layoutY="14.0" prefHeight="25.0" prefWidth="488.0" promptText="Select shift employee" style="-fx-background-color: #FFFFFF;" />
+            <Label layoutX="25.0" layoutY="64.0" text="Start date:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="startDate" defaultColor="#0f60ff" layoutX="140.0" layoutY="64.0" prefWidth="488.0" promptText="Select shift date" style="-fx-background-color: #FFFFFF;" />
+            <Label layoutX="25.0" layoutY="114.0" text="Start time:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXTimePicker fx:id="startTime" defaultColor="#0f60ff" layoutX="140.0" layoutY="114.0" promptText="Select shift start time" style="-fx-background-color: #FFFFFF;" />
+            <Label layoutX="355.0" layoutY="114.0" text="End time:">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXTimePicker fx:id="endTime" defaultColor="#0f60ff" layoutX="457.0" layoutY="114.0" promptText="Select shift end time" style="-fx-background-color: #FFFFFF;" />
+            <JFXToggleButton fx:id="repeatingShiftToggle" layoutX="14.0" layoutY="214.0" onAction="#showRepeatOptions" text="Repeating Shift" toggleColor="#0f60ff" toggleLineColor="#77a7ff">
+               <font>
+                  <Font size="17.0" />
+               </font></JFXToggleButton>
+            <Label fx:id="repeatLabel" layoutX="25.0" layoutY="297.0" prefHeight="20.0" prefWidth="173.0" text="Repeat this shift every " visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="repeatValue" alignment="CENTER" focusColor="#0f60ff" layoutX="201.0" layoutY="297.0" prefHeight="25.0" prefWidth="27.0" promptText="0" style="-fx-background-color: #FFFFFF;" visible="false" />
+            <JFXComboBox fx:id="repeatUnit" focusColor="#0f60ff" layoutX="236.0" layoutY="297.0" prefHeight="25.0" prefWidth="171.0" promptText="Days" style="-fx-background-color: #FFFFFF;" visible="false" />
+            <Button fx:id="saveSingle" layoutX="61.0" layoutY="357.0" mnemonicParsing="false" onAction="#singleSave" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #0F60FF;" text="Save for this shift only" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="saveMultiple" layoutX="61.0" layoutY="389.0" mnemonicParsing="false" onAction="#multiSave" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #0F60FF;" text="Save for this shift and future shifts" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelSingle" layoutX="340.0" layoutY="357.0" mnemonicParsing="false" onAction="#singleCancel" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #F9496C;" text="Cancel this shift only" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelMultiple" layoutX="340.0" layoutY="389.0" mnemonicParsing="false" onAction="#multiCancel" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #F9496C;" text="Cancel this shift and future shifts" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="25.0" layoutY="176.0" prefHeight="26.0" prefWidth="140.0" text="This shift contains">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="thirtyMinBreaks" alignment="CENTER" focusColor="#0f60ff" layoutX="165.0" layoutY="177.0" prefHeight="25.0" prefWidth="27.0" promptText="0" style="-fx-background-color: #FFFFFF;" />
+            <Label layoutX="202.0" layoutY="177.0" prefHeight="26.0" prefWidth="165.0" text="30 minute break, and ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tenMinBreaks" alignment="CENTER" focusColor="#0f60ff" layoutX="367.0" layoutY="177.0" prefHeight="25.0" prefWidth="27.0" promptText="0" style="-fx-background-color: #FFFFFF;" />
+            <Label layoutX="399.0" layoutY="177.0" prefHeight="26.0" prefWidth="165.0" text="10 minute breaks.">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="addShift" layoutX="61.0" layoutY="370.0" mnemonicParsing="false" onAction="#addShift" prefHeight="25.0" prefWidth="514.0" style="-fx-background-color: #0F60FF;" text="Add New Shift" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="addShiftError" alignment="CENTER" contentDisplay="CENTER" layoutX="264.0" layoutY="333.0" textAlignment="CENTER" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

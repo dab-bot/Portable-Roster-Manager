@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxWidth="159.0" onMouseClicked="#singleClick" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RosterDayCardController">
+   <children>
+      <Label fx:id="weekdayLbl" alignment="CENTER" contentDisplay="CENTER" text="MONDAY" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLbl" text="Oct 25" textAlignment="CENTER" textFill="#b2bac9">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="eventLbl" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" textFill="#f9496c" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Region fx:id="selectionHighlight" prefHeight="5.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;" />
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</VBox>

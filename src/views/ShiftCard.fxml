@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundPane" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#editShift" onMouseEntered="#hoverOn" onMouseExited="#hoverOff" prefHeight="71.0" prefWidth="158.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShiftCardController">
+   <children>
+      <Label fx:id="employeeIcon" alignment="CENTER" layoutX="9.0" layoutY="6.0" prefHeight="16.0" prefWidth="26.0" style="-fx-background-color: #f7bcc9;" text="A" textFill="#ff003c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="employeeName" layoutX="40.0" layoutY="1.0" prefHeight="15.0" prefWidth="108.0" text="Aaron.F">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="employeeRole" layoutX="39.0" layoutY="22.0" text="Pharmacy Assistant" textFill="#b2b2b2">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Region layoutX="7.0" layoutY="37.0" prefHeight="1.0" prefWidth="141.0" style="-fx-background-color: #b2b2b2;" />
+      <Label fx:id="startTime" layoutX="22.0" layoutY="41.0" text="04:00">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="endTime" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="86.0" layoutY="41.0" text="10:00" textAlignment="RIGHT">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="44.0" prefHeight="4.0" prefWidth="6.0" text="-">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="startAMPM" layoutX="70.0" layoutY="39.0" prefHeight="4.0" prefWidth="13.0" text="PM">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Label>
+      <Label fx:id="endAMPM" layoutX="134.0" layoutY="39.0" prefHeight="4.0" prefWidth="13.0" text="AM" textOverrun="CLIP">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="41.0" prefHeight="29.0" prefWidth="24.0" text="🕒">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShowController">
+   <top>
+      <AnchorPane prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #086788;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="865.0" layoutY="36.0" mnemonicParsing="false" onAction="#logOut" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: #DD1C1A;" text="LOG OUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ImageView fitHeight="104.0" fitWidth="133.0">
+               <image>
+                  <Image url="images\LOGO (Transparent).png" />
+               </image></ImageView>
+            <Label layoutX="141.0" layoutY="29.0" text="Admin control panel" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Manage Movies">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3D3D3D;">
+                     <center>
+                        <TableView fx:id="table" prefHeight="427.0" prefWidth="882.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="showID" prefWidth="32.0" text="ID" />
+                              <TableColumn fx:id="showTitle" prefWidth="283.0" text="Title" />
+                              <TableColumn fx:id="genre" prefWidth="109.0" text="Genre" />
+                              <TableColumn fx:id="length" prefWidth="71.0" text="Length" />
+                              <TableColumn fx:id="movie" prefWidth="57.0" text="Movie?" />
+                              <TableColumn fx:id="series" prefWidth="50.0" text="Series?" />
+                              <TableColumn fx:id="procoID" prefWidth="55.0" text="PCO ID" />
+                              <TableColumn fx:id="year" prefWidth="100.0" text="Year" />
+                              <TableColumn fx:id="status" prefWidth="142.0" text="Status" />
+                           </columns>
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                     <left>
+                        <AnchorPane prefHeight="467.0" prefWidth="108.0" style="-fx-background-color: #3D3D3D;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="del" layoutX="7.0" layoutY="144.0" mnemonicParsing="false" onAction="#delMovie" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #07A0C3;" text="DELETE" textFill="WHITE" AnchorPane.leftAnchor="7.0" />
+                              <Button fx:id="add" layoutX="7.0" layoutY="107.0" mnemonicParsing="false" onAction="#addMovie" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #07A0C3;" text="ADD" textFill="WHITE" AnchorPane.leftAnchor="7.0" />
+                              <Button layoutX="7.0" layoutY="234.0" mnemonicParsing="false" onAction="#acceptMovie" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #07A0C3;" text="ACCEPT" textFill="WHITE" AnchorPane.leftAnchor="7.0" />
+                              <Button fx:id="reject" layoutX="7.0" layoutY="271.0" mnemonicParsing="false" onAction="#rejectMovie" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #07A0C3;" text="REJECT" textFill="WHITE" AnchorPane.leftAnchor="7.0" />
+                              <Button fx:id="edit" layoutX="7.0" layoutY="189.0" mnemonicParsing="false" onAction="#editMovie" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #07A0C3;" text="EDIT" textFill="WHITE" />
+                              <Button layoutX="7.0" layoutY="315.0" mnemonicParsing="false" onAction="#suspendMovie" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #F0C808;" text="SUSPEND" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Manage Role Requests">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3D3D3D;">
+                     <center>
+                        <TableView fx:id="roleRequestTable" prefHeight="427.0" prefWidth="882.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn fx:id="reqID" prefWidth="32.0" text="ID" />
+                              <TableColumn fx:id="username" prefWidth="126.0" text="Username" />
+                              <TableColumn fx:id="currentRole" prefWidth="153.0" text="Current Role" />
+                              <TableColumn fx:id="requestedRole" prefWidth="126.0" text="Requested Role" />
+                              <TableColumn fx:id="orgName" prefWidth="120.0" text="Organisation Name" />
+                              <TableColumn fx:id="orgContact" prefWidth="143.0" text="Organisaiton Contact" />
+                              <TableColumn fx:id="reqStatus" prefWidth="179.0" text="Status" />
+                           </columns>
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                     <left>
+                        <AnchorPane prefHeight="467.0" prefWidth="108.0" style="-fx-background-color: #3D3D3D;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button layoutX="12.0" layoutY="186.0" mnemonicParsing="false" onAction="#acceptRoleReq" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #07A0C3;" text="ACCEPT" textFill="WHITE" AnchorPane.leftAnchor="12.0" />
+                              <Button layoutX="12.0" layoutY="234.0" mnemonicParsing="false" onAction="#rejectRoleReq" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #07A0C3;" text="REJECT" textFill="WHITE" AnchorPane.leftAnchor="12.0" />
+                           </children>
+                        </AnchorPane>
+                     </left>
+                  </BorderPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
